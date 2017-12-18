@@ -1,0 +1,12 @@
+<svg width="18" height="18" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>ic_sound</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-2657 -4560)">
+<g id="ic_sound">
+<use xlink:href="#path0_fill" transform="translate(2657 4560)" fill="#FFFFFF"/>
+</g>
+</g>
+<defs>
+<path id="path0_fill" fill-rule="evenodd" d="M 11 17.539L 11 15.476C 13.891 14.615 16 11.939 16 8.769C 16 5.6 13.891 2.924 11 2.063L 11 0C 15.007 0.911 18 4.487 18 8.769C 18 13.052 15.007 16.629 11 17.539ZM 13.5 8.76919C 13.5 10.5352 12.48 12.0592 11 12.7972L 11 4.74219C 12.48 5.48019 13.5 7.00419 13.5 8.76919ZM 0 11.769L 0 5.76904L 4 5.76904L 9 0.769043L 9 16.769L 4 11.769L 0 11.769Z"/>
+</defs>
+</svg>
