@@ -9,7 +9,6 @@
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
     <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
     <link href="css/slider/owl.carousel.min.css" type="text/css" rel="stylesheet">
-    <link href="css/slider/owl.theme.default.css" type="text/css" rel="stylesheet">
     
     <link href="fonts/font_icon.css" type="text/css" rel="stylesheet">
     <!--//fonts-->
@@ -17,6 +16,33 @@
     <!-- js -->
     <script src="js/jquery.min.js"></script>
     <script type="text/javascript">
+		/*------------menu---------------*/
+		function consoleBG() { 
+		  if ($(window).scrollTop() == 0) { 
+			$('#bgtombd').css('background', ''); 
+			$('#bgtombd').css('opacity', '0.5'); 
+			$('#menus0 a').css('color', '#ffffff');
+			$('#menus1 a').css('color', '#ffffff');
+			$('#menus2 a').css('color', '#ffffff');
+			$('#while_logo').css('display', 'block');
+			$('#black_logo').css('display', 'none');
+		  } else { 
+			$('#bgtombd').css('background', '#ffffff');
+			$('#bgtombd').css('opacity', '1');
+			$('#menus0 a').css('color', '#181818');
+			$('#menus1 a').css('color', '#181818');
+			$('#menus2 a').css('color', '#181818');
+			$('#while_logo').css('display', 'none');
+			$('#black_logo').css('display', 'block');
+		  } 
+		} 
+		consoleBG(); 
+		 
+		$(window).scroll(function() { 
+		  	consoleBG(); 
+		});
+		/*------------menu---------------*/
+	
 		function diplay_hide (blockId){ 
 			if ($(blockId).css('display') == 'none'){ 
 				$(blockId).animate({height: 'show'}, 200); 
@@ -35,23 +61,23 @@
 <body>
 	<!---------- { top_menu } ------------------------------->
 	<div id="topmenu">
-    	<div class="topmbg"></div>
+    	<div class="topmbg" id="bgtombd"></div>
         <div class="topmct">
         	<div class="container">
-            	<div class="bkpos_15">
+            	<div class="bkpos_15" id="menus0">
                 	<a onClick="diplay_hide('#mobakt');return false;" href="#" class="icon-menu-3 mobile_menus1"></a>
-                	<a href=""><img class="logos" src="images/logo.svg" /></a>
+                	<a href=""><img class="logos" id="while_logo" src="images/logo.svg" /><img id="black_logo" class="logos" src="images/uzafi_logo.svg" /></a>
                     <a href="" class="icon-search-1 mobile_menus2"></a>
                 </div>
                 
-                <div class="bkpos_45 menus">
+                <div class="bkpos_45 menus" id="menus1">
                 	<a href="">Главная</a>
                     <a href="">Цели и задачи</a>
                     <a href="">Новости и события</a>
                     <a href="">Наши контакты</a>
                 </div>
                 
-                <div class="bkpos_40 menus2">
+                <div class="bkpos_40 menus2" id="menus2">
                 	<a href="" class="icon-search-1"><span>Поиск</span></a>
                     <a href="" class="icon-eye-2"><span>Для слабовидящих</span></a>
                     
@@ -83,50 +109,29 @@
     
     <!----------- { header } -------------------------------->
     <header id="slide">
-    	<div id="slidera2" >
+        <video id="video" width="100%" autoplay="autoplay" loop="loop" preload="auto">
+            <source src="images/video/3.mp4"></source>
+        </video>
+    </header>
     
-        <div class="slidera22">
-             <div class="slide_p4" style="background: url(images/Bitmap.jpg) no-repeat;">
-             	<div class="container">
-                	<div class="sdio">
-                        <div class="slide_container">
-                        	<h1>Проекты для <br>иностранных инвесторов</h1>
-                            <p>Сводный перечень перспективных инвестиционных проектов,<br>предусматривающих привлечение ПИИ</p>
-                            <a href="">Узнать больше</a>
-                        </div>
-                    </div>
-                </div>
-             </div>
-        </div>
-        <div class="slidera22">
-            <div class="slide_p4" style="background: url(images/Bitmap.jpg) no-repeat;">
-            	<div class="container">
-                	<div class="sdio">
-                        <div class="slide_container">
-                        	<h1>Проекты для <br>иностранных инвесторов</h1>
-                            <p>Сводный перечень перспективных инвестиционных проектов,<br>предусматривающих привлечение ПИИ</p>
-                            <a href="">Узнать больше</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="slidera22">
-            <div class="slide_p4" style="background: url(images/Bitmap.jpg) no-repeat;">
-            	<div class="container">
-                	<div class="sdio">
-                        <div class="slide_container">
-                        	<h1>Проекты для <br>иностранных инвесторов</h1>
-                            <p>Сводный перечень перспективных инвестиционных проектов,<br>предусматривающих привлечение ПИИ</p>
-                            <a href="">Узнать больше</a>
-                        </div>
-                    </div>
+    <div class="positglobal">
+        <div class="container">
+            <div class="sdio">
+                <div class="slide_container">
+                    <h1>Проекты для <br>иностранных инвесторов</h1>
+                    <p>Сводный перечень перспективных инвестиционных проектов,<br>предусматривающих привлечение ПИИ</p>
+                    <a href="">Узнать больше</a>
                 </div>
             </div>
         </div>
         
-    </div>	
-    </header>
+        <div class="icon_sdio">
+            <svg class="icp_dolp" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 210.414 210.414"  xml:space="preserve" width="512px" height="512px"><g><g><g><path d="M105.207,0C66.532,0,35.069,31.45,35.069,70.104v70.21c0,38.653,31.463,70.1,70.138,70.1     c38.675,0,70.138-31.446,70.138-70.1v-70.21C175.345,31.45,143.881,0,105.207,0z M167.552,140.314     c0,34.357-27.968,62.307-62.345,62.307c-34.377,0-62.345-27.95-62.345-62.307v-70.21c0-34.357,27.968-62.311,62.345-62.311     c34.377,0,62.345,27.953,62.345,62.311V140.314z" />
+    <path d="M105.207,23.379c-2.152,0-3.897,1.743-3.897,3.897v35.286c0,2.154,1.745,3.897,3.897,3.897     c2.152,0,3.897-1.743,3.897-3.897V27.276C109.103,25.122,107.359,23.379,105.207,23.379z" /></g></g></g><g></g><g></g><g></g><g>
+</g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+            </svg>
+        </div>
+    </div>
     <!----------- { header } -------------------------------->
     
     
