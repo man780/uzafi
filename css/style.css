@@ -15,7 +15,8 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 
 
 /* ========== {фон сайта} =========== */
-html, html { -webkit-font-smoothing: antialiased; background-color:#ffffff !important; font-family:'roboto10',Verdana !important;}
+html, html { -webkit-font-smoothing: antialiased; background-color:#ffffff !important; font-family:'roboto10',Verdana !important; height:100% !important;}
+html, body {height:100% !important; }
 /* ========== {фон сайта} =========== */
 
 
@@ -59,7 +60,6 @@ body, select, input, textarea, button {outline: none; padding:0px; margin:0px;}
 #topmenu{ height:auto; position:fixed; width:100%; z-index:999; transition: 0.5s;}
 .topmbg{ height:100px; background-color:#000000; opacity: 0.5; transition: 0.5s;}
 
-#black_logo{ display:none;}
 .mobile_menus1{ float:left; font-size:18px; color:#FFFFFF; display:none; line-height:60px; width:10%;}
 .mobile_menus2{ float:right; font-size:18px; color:#FFFFFF; display:none; line-height:60px; width:10%;}
 .mobile_menus1:hover{opacity:0.8;}
@@ -74,6 +74,10 @@ body, select, input, textarea, button {outline: none; padding:0px; margin:0px;}
 
 .topmct{ height:100px; width:100%; position:relative; z-index:9; margin-top:-100px;}
 .topmct .logos{ height:60px; width:auto; margin-top:20px;}
+.topmct .logos .logcolot1{ fill:#fff;}
+.topmct .logos .logcolot2{ fill:#76b8bf;}
+.topmct .logos .logcolot3{ fill:#fff;}
+
 .topmct .menus{ line-height:100px;}
 .topmct .menus a{ font-size:14px; color:#FFFFFF; font-family:'roboto8',Verdana; padding-left:2%; padding-right:2%;}
 .topmct .menus a:hover{opacity: 0.7;}
@@ -91,8 +95,9 @@ body, select, input, textarea, button {outline: none; padding:0px; margin:0px;}
 .topmenustyles #menus0 a{ color:#181818;}
 .topmenustyles #menus1 a{ color:#181818;}
 .topmenustyles #menus2 a{ color:#181818;}
-.topmenustyles #while_logo{ display:none;}
-.topmenustyles #black_logo{ display:block;}
+.topmenustyles .logos .logcolot1{ fill:#363435;}
+.topmenustyles .logos .logcolot2{ fill:#76b8bf;}
+.topmenustyles .logos .logcolot3{ fill:#346990;}
 .topmenustyles .linklang_aktiv{ color:#FFFFFF !important;}
 /*------------------------ { top_menu } ---------------------------------*/
 
@@ -274,22 +279,31 @@ text-align:center;
 /*--------------------------------------------------------------------------------------СТРАНИЦА2----------------------------------------------------------------------------------*/
 
 /*------------------------ { header } ---------------------------------*/
-#slide{height:800px !important; overflow:hidden;}
-.positglobal{ margin-top:-800px; height:800px; position:relative; z-index:9; width:100%; }
+#slide{height:100% !important; background-color:#000000; overflow:hidden;}
+.videos{ opacity:0.5; height:100% !important; width:100% !important;}
+#slider{ height:100% !important; position:relative;}
+.slide{width:100%;height:100% }
+#video{ height: auto; width:100%;}
+.sli-links{ display:none;}
+#prewbutton, #nextbutton{ display:none;}
 
-.icon_sdio{height:40px; width:40px; display:table; margin-left:auto; margin-right:auto; margin-top:-65px; transition: 0.5s;}
-.icon_sdio svg{fill:#fff; display:table; height:30px; width:30px; transition: 0.5s; margin-top:5px; margin-left:auto; margin-right:auto;}
-.sdio{display:table; width:100%; height:800px; text-align:center;}
+
+.positglobal{ height:100% !important; position: absolute; z-index:9999; width:100%; margin-top:-51%; }
+.positglobal .container{ height:100% !important; }
+
+.icon_sdio{height:40px; width:40px; display:table; margin-left:auto; margin-right:auto;  margin-bottom:12%; transition: 0.5s;}
+.icon_sdio svg{fill:#fff; display:table; height:30px; width:30px; transition: 0.5s; margin-top:-175%; margin-left:auto; margin-right:auto;}
+.sdio{display:table; width:100%; height:100% !important; text-align:center; }
 .slide_container{display: table-cell; vertical-align: middle; width:100%;}
 .slide_container h1{color:#ffffff; font-family:'roboto3',Verdana; font-size:44px; line-height:54px;}
 .slide_container p{color:#ffffff; font-family:'roboto8',Verdana; font-size:15px; line-height:25px;}
-.slide_container a{ display:block; height:48px; display: table; border-radius:5px; line-height:48px; border:1px solid #FFFFFF; padding-left:4%; padding-right:4%; color:#ffffff; font-family:'roboto3',Verdana; font-size:15px; margin-top:3%; transition: 0.5s; margin-left:auto; margin-right:auto;}
+.slide_container a{ display:block; height:48px; margin-top:3%; display: table; border-radius:5px; line-height:48px; border:1px solid #FFFFFF; padding-left:4%; padding-right:4%; color:#ffffff; font-family:'roboto3',Verdana; font-size:15px; transition: 0.5s; margin-left:auto; margin-right:auto;}
 .slide_container a:hover{ background-color:#FFFFFF; color:#1A1A1A; box-shadow: 0 6px 6px rgba(0, 0, 0, .2);}
 /*------------------------ { header } ---------------------------------*/
 
 /*--------------------- { position1_page } ----------------------------*/
 #position1_page{background-color:#fff;}
-.pageselect{   border-right:1px solid #eeeeee; border-bottom:1px solid #eeeeee; transition: 0.5s;}
+.pageselect{   border:1px solid #eeeeee; transition: 0.5s;}
 .blocksd_pag{ height:300px; margin-top:-300px; display:table; width:100%; position:relative; z-index:9;}
 .tabck{display: table-cell; vertical-align: middle; }
 .blocksd_pag h1{color:#1A1A1A; font-family:'roboto3',Verdana; font-size:28px; line-height:28px; text-align:center; transition: 0.5s;}
@@ -306,7 +320,7 @@ opacity:0;
 transition: 0.5s;
 }
 
-.pageselect:hover{ border-right:1px solid #356891; border-bottom:1px solid #356891;}
+.pageselect:hover{ border:1px solid #356891;}
 .pageselect:hover h1{ color:#FFFFFF;}
 .pageselect:hover a{box-shadow: 0 6px 6px rgba(0, 0, 0, .2);}
 .pageselect:hover .bg_activ{background-color:#356891;}
@@ -375,6 +389,10 @@ transition: 0.5s;
 /*--------------------------------------------------------------------------------------СТРАНИЦА1----------------------------------------------------------------------------------*/
 }
 
+@media(max-width:1400px){
+#video{ height:100%; width:auto;}
+.positglobal{ margin-top:-73%; }
+}
 @media(max-width:748px){
 /*----------------------------------------------------------------------------------------ОБЩЕЕ------------------------------------------------------------------------------------*/
 /*------------------------ { top_menu } ---------------------------------*/
@@ -479,20 +497,33 @@ transition: 0.5s;
 /*--------------------------------------------------------------------------------------СТРАНИЦА1----------------------------------------------------------------------------------*/
 
 /*--------------------------------------------------------------------------------------СТРАНИЦА2----------------------------------------------------------------------------------*/
+
+/*------------------------ { header } ---------------------------------*/
+#slide{
+height:500px; 
+overflow: hidden;
+background: url("../images/Header3.jpg") no-repeat;
+background-size:cover;
+-webkit-background-size: cover;
+-o-background-size: cover;
+-ms-background-size: cover;
+-moz-background-size: cover;
+}
+#slider{display:none;}
+
+.positglobal{ height:500px; position:relative; z-index:99; width:100%; margin-top:0%; }
+.positglobal .container{ height:100% !important; }
+
+.icon_sdio{ display:none;}
+.sdio{text-align: left; }
+.slide_container h1{ font-size:40px; line-height:44px;}
+.slide_container p{font-size:14px; line-height:25px;}
+.slide_container a{ margin-top:5%;  margin-left:0; margin-right:0;}
+
+/*------------------------ { header } ---------------------------------*/
+
 /*--------------------- { position1_page } ----------------------------*/
-/*------------------------ { header } ---------------------------------*/
-#slide{ display:none;}
-.positglobal{ margin-top:0; height: auto;  background-color:#CCCCCC; padding-top:40%; padding-bottom:40%; }
-
-.icon_sdio{margin-top: 18%;}
-.icon_sdio svg{fill:#181818; }
-.sdio{ height: auto;}
-.slide_container h1{color:#181818;}
-.slide_container p{color:#181818; }
-.slide_container a{ border:1px solid #181818;  color:#181818; }
-/*------------------------ { header } ---------------------------------*/
-
-#position1_page .bkpos_33{ float:none; width:100%;}
+#position1_page .bkpos_33{ float:none; width:100%; padding:2%;}
 /*--------------------- { position1_page } ----------------------------*/
 /*--------------------------------------------------------------------------------------СТРАНИЦА2----------------------------------------------------------------------------------*/
 }
